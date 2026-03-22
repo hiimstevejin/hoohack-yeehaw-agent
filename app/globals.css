@@ -65,6 +65,79 @@ h1 {
   line-height: 1.7;
 }
 
+.copy code {
+  margin: 0 0.15rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(30, 27, 24, 0.06);
+  font-size: 0.95em;
+}
+
+.home-form,
+.room-actions {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(30, 27, 24, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text);
+  font: inherit;
+}
+
+.field input:focus {
+  outline: 2px solid rgba(179, 74, 30, 0.22);
+  outline-offset: 2px;
+}
+
+.primary-button,
+.secondary-button,
+.link-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  border: none;
+  background: var(--accent);
+  color: #fffaf4;
+}
+
+.secondary-button {
+  border: 1px solid rgba(30, 27, 24, 0.14);
+  background: transparent;
+  color: var(--text);
+}
+
+.secondary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.room-card {
+  width: min(720px, 100%);
+}
+
 @media (max-width: 640px) {
   .page-shell {
     padding: 20px;
