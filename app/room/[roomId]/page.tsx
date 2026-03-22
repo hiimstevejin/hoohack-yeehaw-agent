@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 
-export default async function RoomRedirectPage({
-  params
+export default async function Page({
+  params,
 }: {
   params: Promise<{ roomId: string }>;
 }) {
