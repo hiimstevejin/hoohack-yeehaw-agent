@@ -43,6 +43,10 @@ Creating UI animation for YeeHaw was fun and challenging as we looked up variety
 
 We are proud that we have a demonstratable AI agent living inside a video-call that can ingest big documents that are 20+ pages, use external data and combine it with the provided document, and fun interactions through gestures and voice. And using Google Mediapipe to capture user gesture to trigger events.
 
+## Deployed on 
+https://www.yeehaw-agent.us/
+using Godaddy (Might not always be available because backend is deployed on free service)
+
 ## What we learned
 
 We learned to use agents by giving them tools and routing them to correct functions, and we also learned to plan our architecture thoroughly to gain value out of coding with AI.
