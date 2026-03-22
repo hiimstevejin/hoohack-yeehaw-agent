@@ -22,7 +22,7 @@ You should already have:
 - a Supabase Storage bucket for uploaded documents
 - the SQL from [`supabase/schema.sql`](./supabase/schema.sql) applied
 - a LiveKit server or LiveKit Cloud project
-- API keys for OpenAI, AssemblyAI, and Cartesia if you want the full voice pipeline
+- API keys for OpenAI, AssemblyAI, and ElevenLabs if you want the full voice pipeline
 
 ## Environment Variables
 
@@ -41,8 +41,8 @@ Set these in the Vercel project:
 - `NEXT_PUBLIC_SHOW_SETTINGS_MENU`
 - `OPENAI_API_KEY`
 - `ASSEMBLYAI_API_KEY`
-- `CARTESIA_API_KEY`
-- `CARTESIA_VOICE_ID`
+- `ELEVENLABS_API_KEY`
+- `ELEVENLABS_VOICE_ID`
 
 Notes:
 
@@ -59,8 +59,8 @@ Set these on Heroku or DigitalOcean:
 - `SUPABASE_DOCUMENT_BUCKET`
 - `OPENAI_API_KEY`
 - `ASSEMBLYAI_API_KEY`
-- `CARTESIA_API_KEY`
-- `CARTESIA_VOICE_ID`
+- `ELEVENLABS_API_KEY`
+- `ELEVENLABS_VOICE_ID`
 
 Notes:
 
