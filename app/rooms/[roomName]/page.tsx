@@ -1,29 +1,33 @@
-import Link from 'next/link';
+import * as React from 'react';
+import { PageClientImpl } from './PageClientImpl';
+import { isVideoCodec } from '@/lib/types';
 
-export default async function RoomPage({
-  params
+export default async function Page({
+  params,
+  searchParams,
 }: {
   params: Promise<{ roomName: string }>;
+  searchParams: Promise<{
+    // FIXME: We should not allow values for regions if in playground mode.
+    region?: string;
+    hq?: string;
+    codec?: string;
+  }>;
 }) {
-  const { roomName } = await params;
+  const _params = await params;
+  const _searchParams = await searchParams;
+  const codec =
+    typeof _searchParams.codec === 'string' && isVideoCodec(_searchParams.codec)
+      ? _searchParams.codec
+      : 'vp9';
+  const hq = _searchParams.hq === 'true' ? true : false;
 
   return (
-    <main className="page-shell">
-      <section className="hero-card room-card">
-        <p className="eyebrow">Dynamic Room</p>
-        <h1>{roomName}</h1>
-        <p className="copy">
-          This room page is served from the dynamic route at <code>/rooms/[roomName]</code>.
-        </p>
-        <div className="room-actions">
-          <Link className="primary-button" href="/">
-            Back Home
-          </Link>
-          <Link className="secondary-button link-button" href={`/room/${encodeURIComponent(roomName)}`}>
-            Reload Via Short Route
-          </Link>
-        </div>
-      </section>
-    </main>
+    <PageClientImpl
+      roomName={_params.roomName}
+      region={_searchParams.region}
+      hq={hq}
+      codec={codec}
+    />
   );
 }
