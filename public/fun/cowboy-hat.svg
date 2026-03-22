@@ -1,0 +1,21 @@
+<svg width="512" height="280" viewBox="0 0 512 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hatCrown" x1="256" y1="24" x2="256" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3C98B"/>
+      <stop offset="0.58" stop-color="#B87335"/>
+      <stop offset="1" stop-color="#6C3D1D"/>
+    </linearGradient>
+    <linearGradient id="hatBrim" x1="256" y1="144" x2="256" y2="252" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D89A58"/>
+      <stop offset="0.62" stop-color="#8A5225"/>
+      <stop offset="1" stop-color="#5C3418"/>
+    </linearGradient>
+  </defs>
+  <path d="M134 128C142 78 182 34 256 34C330 34 370 78 378 128L366 168H146L134 128Z" fill="url(#hatCrown)" stroke="#4A2811" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M190 120C207 94 226 82 256 82C286 82 305 94 322 120" stroke="#F6DEBA" stroke-opacity="0.7" stroke-width="8" stroke-linecap="round"/>
+  <rect x="182" y="150" width="148" height="28" rx="14" fill="#4F2B12" stroke="#E9C77E" stroke-width="6"/>
+  <path d="M58 188C84 154 122 146 174 156C207 162 226 176 256 176C286 176 305 162 338 156C390 146 428 154 454 188C469 208 456 230 422 232H90C56 230 43 208 58 188Z" fill="url(#hatBrim)" stroke="#4A2811" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M102 196C132 178 164 174 203 182" stroke="#EAC18B" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+  <path d="M410 196C380 178 348 174 309 182" stroke="#EAC18B" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 127L265 145H285L269 156L275 176L256 164L237 176L243 156L227 145H247L256 127Z" fill="#F8D24E" stroke="#7B4D0A" stroke-width="6" stroke-linejoin="round"/>
+</svg>
