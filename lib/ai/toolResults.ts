@@ -142,7 +142,7 @@ export function parseVoiceOverlayRequest(event: VoiceToolResultEvent): VoiceOver
               ? `${stock.change > 0 ? '+' : ''}${stock.change.toFixed(2)}${
                   stock.changePercent ? ` (${stock.changePercent})` : ''
                 }`
-              : stock.changePercent ?? 'Unavailable',
+              : (stock.changePercent ?? 'Unavailable'),
         },
         {
           label: 'Currency',

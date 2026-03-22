@@ -67,14 +67,60 @@ export function PageClientImpl(props: {
   const handlePreJoinError = React.useCallback((e: any) => console.error(e), []);
 
   return (
-    <main data-lk-theme="default" style={{ height: '100%' }}>
+    <main
+      data-lk-theme="default"
+      style={{
+        position: 'relative',
+        minHeight: '100vh',
+        height: '100%',
+        overflow: 'hidden',
+        background:
+          "linear-gradient(180deg, rgba(28, 22, 17, 0.62), rgba(22, 17, 13, 0.78)), url('/CowboyBackground.png')",
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        color: '#f3eadc',
+      }}
+    >
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(circle at center, rgba(255, 231, 177, 0.1), transparent 30%), repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0, rgba(255, 255, 255, 0.02) 2px, transparent 2px, transparent 80px)',
+        }}
+      />
       {connectionDetails === undefined || preJoinChoices === undefined ? (
-        <div style={{ display: 'grid', placeItems: 'center', height: '100%' }}>
-          <PreJoin
-            defaults={preJoinDefaults}
-            onSubmit={handlePreJoinSubmit}
-            onError={handlePreJoinError}
-          />
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            display: 'grid',
+            placeItems: 'center',
+            minHeight: '100vh',
+            padding: '2rem',
+          }}
+        >
+          <div
+            style={{
+              width: 'min(100%, 28rem)',
+              padding: '1.45rem',
+              borderRadius: '1.35rem',
+              background: 'rgba(58, 44, 33, 0.86)',
+              border: '1px solid rgba(227, 196, 134, 0.18)',
+              boxShadow:
+                '0 28px 80px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 245, 225, 0.05)',
+              backdropFilter: 'blur(8px)',
+            }}
+          >
+            <PreJoin
+              defaults={preJoinDefaults}
+              onSubmit={handlePreJoinSubmit}
+              onError={handlePreJoinError}
+            />
+          </div>
         </div>
       ) : (
         <VideoConferenceComponent

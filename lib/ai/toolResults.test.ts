@@ -85,6 +85,8 @@ describe('tool result parsing', () => {
   });
 
   it('ignores malformed tool payloads', () => {
-    expect(parseVoiceOverlayRequest(createToolResultEvent('get_stock_quote', 'not-json'))).toBeNull();
+    expect(
+      parseVoiceOverlayRequest(createToolResultEvent('get_stock_quote', 'not-json')),
+    ).toBeNull();
   });
 });
