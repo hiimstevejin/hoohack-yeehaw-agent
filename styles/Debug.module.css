@@ -1,0 +1,15 @@
+.overlay {
+  position: fixed;
+  inset: 1rem;
+  overflow: auto;
+  z-index: 1000;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(5, 7, 11, 0.94);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.detailsSection {
+  margin-top: 1rem;
+}
